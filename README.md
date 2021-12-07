@@ -1,0 +1,1 @@
+This is my portfolio website. Techs used are HTML and CSS.
