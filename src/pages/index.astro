@@ -1,9 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageTitle = "Home Page";
+const pageTitle = "Hoang Pham";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+  <figure class="quote">
+    <blockquote>
+      <p>
+        "Most technology stacks have some sort of first-class artifact,
+        along with tools to support creating and installing them.
+        Ruby has gems,
+        Java has JAR files and WAR files,
+        and Python has eggs."
+      </p>
+    </blockquote>
+    <figcaption>
+      - Sam Newman, Building Microservices
+    </figcaption>
+  </figure>
 </BaseLayout>

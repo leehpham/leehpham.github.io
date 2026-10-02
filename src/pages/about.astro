@@ -2,61 +2,32 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About Me";
-
-type Identity = {
-  firstName: string;
-  country: string;
-  occupation: string;
-  hobbies: string[];
-};
-
-const identity: Identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "blue";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <style is:global define:vars={{skillColor, fontWeight, textCase}}>
-    h1 {
-      color: purple;
-      font-size: 4rem;
-    }
-    .skill {
-      color: var(--skillColor);
-      font-weight: var(--fontWeight);
-      text-transform: var(--textCase);
-    }
-  </style>
+  <p>
+    I'm a backend developer, engineer manager living in Da Nang, Vietnam.
+    I'm currently taking a gap, building fun things just for the sake of it.
+  </p>
 
-  <h2>... and my new Astro site!</h2>
+  <p>
+    I studied and worked in the U.S. for about 10 years.
+    Then I decided to move back to Vietnam.
+    The main reason was for my mental health.
+  </p>
 
-  <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-  <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-  <p>Here are a few facts about me:</p>
-  <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-    <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-  </ul>
-  <p>My skills are:</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
-  {happy && <p>I am happy to be learning Astro!</p>}
-  {finished && <p>I finished this tutorial!</p>}
-  {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+  <p>
+    I was CTO of <a href="https://www.byterover.dev/">ByteRover</a> for almost a year,
+    then left the company in 06/2026.
+  </p>
+
+  <p>
+    I used to play guitar semi-professionally.
+    The money wasn't much but it was an extremely fun ride.
+    Ever since I moved back to Vietnam,
+    I haven't touched my Strandberg Boden and my rig.
+    They got pretty dusty and probably hated me for it.
+    I do plan to get serious with music again in the future.
+  </p>
 </BaseLayout>
 
