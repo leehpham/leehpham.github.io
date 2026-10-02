@@ -12,7 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.3.5"
+    "@astrojs/rss": "4.0.19",
+    "astro": "7.3.5"
   },
   "allowScripts": {
     "esbuild": true
