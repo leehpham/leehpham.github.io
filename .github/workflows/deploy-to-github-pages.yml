@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Event - ${{ github.event_name }}."
+      - run: echo "Runner - ${{ runner.os }}."
+      - run: echo "Branch - ${{ github.ref }}."
+      - run: echo "Repo - ${{ github.repository }}"
+      - name: Checkout your repository using git
+        uses: actions/checkout@v7
+      - name: Install, build, and upload your site
+        uses: withastro/action@v6
+      - name: Inspect the github-pages artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "::group::Tarball on the runner"
+          echo "$RUNNER_TEMP"
+          ls -lh "$RUNNER_TEMP/artifact.tar"
+          tar -tvf "$RUNNER_TEMP/artifact.tar"
+          echo "::endgroup::"
+
+          echo "::group::Artifact as stored by GitHub"
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts" \
+            --jq '.artifacts[] | select(.name == "github-pages")'
+          echo "::endgroup::"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
