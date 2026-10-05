@@ -28,6 +28,7 @@ jobs:
           tar -tvf "$RUNNER_TEMP/artifact.tar"
           echo "::endgroup::"
 
+          # Double check
           echo "::group::Artifact as stored by GitHub"
           gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts" \
             --jq '.artifacts[] | select(.name == "github-pages")'
@@ -36,3 +37,12 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # ???
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - run: echo "Runner - ${{ runner.os }}."
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
