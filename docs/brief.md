@@ -1,6 +1,6 @@
 # Project Brief: blog
 
-_Last updated: 2026-10-04_
+_Last updated: 2026-10-16_
 
 ## Problem
 
@@ -33,29 +33,32 @@ Not for: anyone expecting a community or forum.
 - **Under 1 minute** from "publishing" to the post being visible on the public site.
 - Lighthouse (mobile) score **>= 95** for performance and
   accessibility and SEO, on the home page and a post page.
-- Running cost **under $???/year**.
+- Running cost: 0.
 - **12 posts** published within 6 months of launch (about 2 posts/month).
 
 ## Scope (MVP)
 
-- Posts written in Markdown and stored as Markdown.
+- (done) Posts written in Markdown and stored as Markdown.
+- Blog page listing posts, newest first.
 - Published and updated dates on posts.
-- A 404 page.
-- Home page listing posts, newest first.
 - Post pages with code syntax highlighting.
-- Tags, with a page per tag.
+- Tags page.
 - About page with contact links.
-- RSS feed, sitemap, basic SEO and social-preview meta tags.
 - Responsive layout that reads well on mobile.
+- 404 page.
 - A raw Markdown version of each post, and an `llms.txt`.
+- RSS feed, sitemap, basic SEO and social-preview meta tags.
 
 ## Non-goals (for now)
 
-- Comments, newsletter, or site search.
-- General-purpose CMS features: user roles, plugins, editorial workflows.
-- Multiple authors.
-- Monetization (ads, paywalls, sponsorships).
 - A custom-designed theme; a clean, readable default is enough.
+- Custom favicon.
+- Site search.
+- Monetization (ads, paywalls, sponsorships).
+- Newsletter.
+- General-purpose CMS features: user roles, plugins, editorial workflows.
+- Comments
+- Multiple authors.
 
 ## Constraints
 
@@ -69,10 +72,6 @@ Not for: anyone expecting a community or forum.
 
 ## Open questions
 
-- Running cost per year is not determined yet.
-  Once estimated, update "Success metrics" with this information.
-- Budget is not determined yet.
-  Once determined, update "Constraints" with this information.
 - Hosting ??? (ADR note for this).
 - Analytics ??? (ADR note for this).
 - Domain name
