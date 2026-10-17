@@ -1,6 +1,6 @@
 # Project Brief: blog
 
-_Last updated: 2026-10-16_
+_Last updated: 2026-10-17_
 
 ## Problem
 
@@ -72,6 +72,4 @@ Not for: anyone expecting a community or forum.
 
 ## Open questions
 
-- Hosting ??? (ADR note for this).
-- Analytics ??? (ADR note for this).
-- Domain name
+- Analytics.
