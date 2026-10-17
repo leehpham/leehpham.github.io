@@ -18,11 +18,15 @@ push to `main`.
 
 ## Consequences
 
+### Positive
+
 Hosting, HTTPS, and Actions minutes are free for a public repo,
 with no extra account or secret to manage.
 
 The workflow runs the real Astro build, so `dist/` is never
 committed, unlike branch-based Pages publishing.
+
+### Negative
 
 We are tied to GitHub, can only serve static files, and must stay
 within Pages' soft limits (1 GB site, 100 GB/month bandwidth).

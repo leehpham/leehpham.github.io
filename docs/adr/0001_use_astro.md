@@ -16,6 +16,10 @@ sitemap integrations
 
 ## Consequences
 
+### Positive
 Front-matter validation and syntax highlighting come built in.
+
+### Negative
+
 Node dependencies need regular updates, and major upgrades
 may need migration work, so the version is pinned.
