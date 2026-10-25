@@ -2,7 +2,7 @@
 
 _Last updated: 2026-10-19_
 
-Contexts: TBD (see context-map.md).
+Contexts: see context-map.md
 **All** = same meaning in every context.
 
 | Term | Context | Definition | Avoid |
