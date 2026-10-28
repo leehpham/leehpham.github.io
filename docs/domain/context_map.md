@@ -1,6 +1,6 @@
 # Context Map: blog
 
-_Last updated: 2026-10-25_
+_Last updated: 2026-10-28_
 
 ## Subdomains
 
@@ -21,3 +21,19 @@ _Last updated: 2026-10-25_
 | Writing         | Defines what a valid post is and when it goes from draft to published.                                         | Writing                                          | Author, Post, Draft, Front matter, Slug, Tag, Description, Published date, Updated date, Publish                                             |
 | Site            | Shows published posts and the author to readers and AI agents, and makes posts findable; never changes a post. | Reading, Author profile, Agent access, Discovery | Site, Reader, AI agent, Home page, Blog page, Post page, Tag page, Tag index, About page, Raw Markdown, `llms.txt`, RSS feed, Social preview |
 | Delivery        | Builds the site and deploys it, live within 1 minute of publishing.                                            | Site generation, Hosting                         | None yet                                                                                                                                     |
+
+## Map
+
+![context_map](./context_map.drawio.svg)
+
+## Relationships
+
+| Upstream | Downstream | Pattern                                | How they integrate                                                                                                                                                                                                                                                           |
+|----------|------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Writing  | Site       | Open Host Service / Published Language | Site gets published posts by querying the Writing post collection at build time. The published language is the post: Markdown with front matter (title, description, `pubDate`, `updatedDate`, tags) and a slug from its file name. Site never changes a post.               |
+| Delivery | Writing    | Conformist                             | Writing declares its front-matter rules as an Astro content collection schema; the build checks every post against it and fails on invalid front matter ([ADR-0001](../adr/0001_use_astro.md)).                                                                              |
+| Delivery | Site       | Conformist                             | Site is built from Astro pages and routes, and its RSS feed and sitemap use the official Astro integrations ([ADR-0001](../adr/0001_use_astro.md)). Delivery builds them to static files and deploys them to GitHub Pages ([ADR-0002](../adr/0002_host_on_github_pages.md)). |
+
+## Open questions / hotspots
+
+- TBD
