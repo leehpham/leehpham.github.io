@@ -22,10 +22,23 @@ I want a source of passive income.
 - **General audience**: arriving from search, or URLs;
   looking for different views on specific matters.
 - **Potential employers/clients**: checking my work and how I think.
-- **AI Agents**: fetching post on behalf of their users;
+- **AI Agents**: fetching posts on behalf of their users;
   need content that's easy to parse.
 
 Not for: anyone expecting a community or forum.
+
+## Strategy
+
+- **Value proposition**:
+  - Readers: problem-focused posts and my own take on topics; 
+    fast, clean, no blocking ads or paywalls.
+  - Me: I own the content and the platform; a sandbox for new tech.
+- **Differentiator**: my voice and the problems I write about.
+  The platform is generic; the writing is the core.
+  Bonus: posts are easy for AI agents to read (raw Markdown, `llms.txt`).
+- **Business model**: none for MVP; zero running cost on GitHub Pages.
+  Passive income is a long-term goal, not an MVP one (see Non-goals).
+- **Alternatives today**: Medium, dev.to, Hashnode, Substack, LinkedIn posts, etc.
 
 ## Success metrics
 
@@ -57,7 +70,7 @@ Not for: anyone expecting a community or forum.
 - Monetization (ads, paywalls, sponsorships).
 - Newsletter.
 - General-purpose CMS features: user roles, plugins, editorial workflows.
-- Comments
+- Comments.
 - Multiple authors.
 
 ## Constraints
