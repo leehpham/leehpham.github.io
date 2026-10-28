@@ -6,7 +6,6 @@ const DATE_STR_END_IDX = 10;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <p>Published on: {frontmatter.pubDate.toString().slice(0, DATE_STR_END_IDX)}</p>
   <p><em>{frontmatter.description}</em></p>
   <p>Written by {frontmatter.author}</p>
 
@@ -16,6 +15,8 @@ const DATE_STR_END_IDX = 10;
     ))}
   </div>
 
+  <p>Published on: {frontmatter.pubDate.toString().slice(0, DATE_STR_END_IDX)}</p>
+  <p>Updated on: {frontmatter.updatedDate.toString().slice(0, DATE_STR_END_IDX)}</p>
   <slot />
 </BaseLayout>
 
